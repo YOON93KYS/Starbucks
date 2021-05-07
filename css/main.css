@@ -1,5 +1,79 @@
-div {
-  width: 200px;
-  height: 200px;
-  background: url("../images/logo.png");
+/* COMMON */
+body {
+  /*  기본 베이스는 완전한 검정색이나, 디자인적으로 촌스러워 보일 수 있으니 색깔지정 */
+  color: #333333; /* 같은 숫자가 반복 될 경우, 3개로 줄일 수 있음 333 같이 */
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.4; /* 사용하는 글꼴에 따라 최적의 line-height가 다를 수 있음 */
+  font-family: 'Nanum Gothic', sans-serif;
+}
+img {
+  display: block; /* 이미지는 글자처럼 취급하지 않고, 하나의 블럭요소로으로 사용하겠다 */
+}
+a {
+  text-decoration: none; /* a요소는 밑줄이 없는 상태로 만들겠다 */
+}
+
+
+/* HEADER */
+header {
+  background-color: royalblue;
+}
+header .inner {
+  width: 1100px;
+  height: 120px;
+  margin: 0 auto; /* margin:외부여백, 위아래는 0 좌우는 auto그러면 중앙정렬됨  auto:알아서 정렬 하겠다*/
+  background-color: orange;
+  position: relative;
+}
+header .logo {
+  height: 75px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  display: none;
+} 
+header .sub-menu {
+
+}
+header .sub-menu ul.menu {
+  font-family: Arial, sans-serif; /* Arial해보고 없으면 sans-serif 쓴다 */
+  display: flex;
+ 
+}
+header .sub-menu ul.menu li {
+  position: relative;
+}
+header .sub-menu ul.menu li::before {
+  content: "";
+  display: block; /* 이것도 뭐냐 */
+  width: 1px;
+  height: 12px;
+  background-color: #e5e5e5;
+  position: absolute; /* 이게 뭐냐 ,*/
+  top: 0;
+  bottom: 0;
+  margin: auto;
+}
+header .sub-menu ul.menu li:first-child:before { /* 여러li태그중에 첫번째 태그를 찾아서 첫번째 Li태그에 가상 선택 부분은 안보이게 none으로 */
+  display: none;
+}  
+header .sub-menu ul.menu li a {
+  font-size: 12px;
+  padding: 11px 16px; /* 클릭할 수 있는 범위 지정 */
+  display: block;
+  color: #656565;
+}
+header .sub-menu ul.menu li a:hover {
+  color: #000000 /* 마우스가 올라가 있으면 검정색으로 변해라 */
+}
+header .sub-menu .search {
+
+}
+header .sub-menu .search input {
+
+}
+header .sub-menu .search .material-icons {
+
 }
